@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Simple X Image Viewer
+Type=Application
+Exec=sxiv %f
+NoDisplay=true

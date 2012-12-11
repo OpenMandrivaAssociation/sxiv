@@ -34,3 +34,10 @@ desktop-file-install --dir=%{buildroot}%{_datadir}/applications %{SOURCE1}
 %{_bindir}/sxiv
 %{_mandir}/man1/*
 %{_datadir}/applications
+
+
+%changelog
+* Thu Nov 17 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.0-1
++ Revision: 731196
+- imported package sxiv
+
