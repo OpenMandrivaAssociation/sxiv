@@ -7,7 +7,7 @@ License:	GPLv2
 URL:		https://github.com/muennich/%{name}/
 Source0:	https://github.com/downloads/muennich/%{name}/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
-BuildRequires:	libx11-devel
+BuildRequires:	pkgconfig(x11)
 BuildRequires:	imlib2-devel
 BuildRequires:	desktop-file-utils
 
