@@ -1,6 +1,6 @@
 Name:		sxiv
 Version:	1.0
-Release:	1
+Release:	2
 Summary:	Simple (or small or suckless) X Image Viewer
 Group:		Graphics
 License:	GPLv2
