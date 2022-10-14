@@ -1,11 +1,14 @@
+# Bogus build system...
+%undefine _debugsource_packages
+
 Name:		sxiv
-Version:	1.0
-Release:	3
+Version:	26
+Release:	1
 Summary:	Simple (or small or suckless) X Image Viewer
 Group:		Graphics
 License:	GPLv2
 URL:		https://github.com/muennich/%{name}/
-Source0:	https://github.com/downloads/muennich/%{name}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/muennich/sxiv/archive/refs/tags/v%{version}.tar.gz
 Source1:	%{name}.desktop
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	imlib2-devel
@@ -20,13 +23,13 @@ should be kept small and clean to make it easy for you to dig into it and
 customize it for your needs.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-%make
+%make_build PREFIX=%{_prefix}
 
 %install
-make install DESTDIR=%{buildroot} PREFIX=%{_prefix}
+%make_install PREFIX=%{_prefix}
 desktop-file-install --dir=%{buildroot}%{_datadir}/applications %{SOURCE1}
 
 %files
@@ -34,10 +37,4 @@ desktop-file-install --dir=%{buildroot}%{_datadir}/applications %{SOURCE1}
 %{_bindir}/sxiv
 %{_mandir}/man1/*
 %{_datadir}/applications
-
-
-%changelog
-* Thu Nov 17 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.0-1
-+ Revision: 731196
-- imported package sxiv
-
+%{_datadir}/sxiv
