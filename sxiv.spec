@@ -10,6 +10,7 @@ License:	GPLv2
 URL:		https://github.com/muennich/%{name}/
 Source0:	https://github.com/muennich/sxiv/archive/refs/tags/v%{version}.tar.gz
 Source1:	%{name}.desktop
+BuildRequires:	make
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	imlib2-devel
 BuildRequires:	desktop-file-utils
